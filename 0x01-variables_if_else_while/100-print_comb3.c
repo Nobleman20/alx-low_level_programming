@@ -1,29 +1,26 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
  * main - entry point
+ * Description: prints two digits combination
  * Return: alway returns 0
 */
 int main(void)
 {
-	int i;
-	int j;
-	int k;
+	int c, i;
 
-	for (i = 10; i <= 19; i++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		for (j = 10; j <= 19; j++)
+		for (i = '0'; i <= '9'; i++)
 		{
-			for (k = 0; k <= 9; k++)
+			if (c < i)
 			{
-				if ((j % 10) > (i % 10))
+				putchar(c);
+				putchar(i);
+				if (c != '8' || (c == '8' && i != '9'))
 				{
-					putchar((i % 10) + '0');
-					putchar((j % 10) + '0');
-					if (i != 18 || j != 19)
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}

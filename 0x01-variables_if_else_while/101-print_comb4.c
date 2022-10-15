@@ -5,27 +5,25 @@
 */
 int main(void)
 {
-	int i;
-	int j;
-	int k;
+	int left;
+	int right;
+	int center;
 
-	for (i = 0; i <= 9; i++)
+	for (left = 48; left <= 57; left++)
 	{
-		for (j = 0; j <= 9; j++)
+		for (center = left + 1; center <= 57; center++)
 		{
-			for (k = 0; k <= 9; k++)
+			for (right = center + 1 ; right <= 57; right++)
 			{
-				if (k > j && j > i)
+				putchar(left);
+				putchar (center);
+				putchar (right);
+				if  ((left == 55) && (center == left + 1) && (right == center + 1))
 				{
-					putchar(i + '0');
-					putchar(j + '0');
-					putchar(j + '0');
-					if (i != 7 || j != 8 || k != 9)
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					break;
 				}
+				putchar(',');
+				putchar (' ');
 			}
 		}
 	}
