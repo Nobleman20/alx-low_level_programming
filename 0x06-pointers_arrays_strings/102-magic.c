@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/**
+ * main - function advanced task
+*/
+
 int main(void)
 {
 	int n;
