@@ -1,8 +1,3 @@
-/*
- * File: 1-djb2.c
- * Author: Emmanuel Oluyege
- */
-
 #include "hash_tables.h"
 
 /**
